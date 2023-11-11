@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ </head>
+ <body>
+
+    
+    <!-- Contenu de la page -->
+    
+    <div id="video-container">
+      <video autoplay muted controls width="100%">
+        <!-- Ajoutez le lien vers votre vidéo -->
+        <source src="Asset/Untitled Video.mp4" type="video/mp4">
+        Votre navigateur ne supporte pas la lecture de vidéos.
+      </video>
+      <div id="video-popup-btn">
+        <!-- Ajoutez une icône ou un texte pour le bouton de la pop-up -->
+        <span onclick="openPopup()">Bénéficiez de l'offre</span>
+      </div>
+    </div>
+    
+    <div id="popup-overlay" onclick="closePopup()">
+      <div id="popup">
+        <!-- Contenu de la pop-up -->
+        <h2 style="color: #FB1616;">Ne laissez pas cette opportunité passer !</h2>
+        <p>Participez à notre programme de formation en Management et Leadership pour transformer votre activité. Développez vos compétences, créez une visibilité exceptionnelle, et assurez la croissance de votre entreprise.</p>
+        <a href="./Acceuil.html">
+        <button style="background-color: #0F206D; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" >S'inscrire maintenant</button></a>
+        <div id="close-popup-btn" onclick="closePopup()">X</div>
+      </div>
+    </div>
+    
+    <!-- Script pour afficher et fermer la pop-up -->
+    
+    <script>
+      function openPopup() {
+        document.getElementById('popup-overlay').style.display = 'flex';
+      }
+    
+      function closePopup() {
+        document.getElementById('popup-overlay').style.display = 'none';
+      }
+    
+      setTimeout(openPopup, 20000); // Affiche la pop-up après 20 secondes
+    </script>
+
+    
+    
+    
+</body>
+</html>

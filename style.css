@@ -1,0 +1,241 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0F206D; /* Bleu foncé */
+    color: #FB1616; /* Rouge */
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 20px;
+  }
+  
+  .navbar a {
+    text-decoration: none;
+    color: #FB1616; /* Rouge */
+    font-weight: bold;
+    font-size: 16px;
+  }
+
+
+  
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Styles pour la section principale */
+  .main-section {
+    padding-top: 60px; /* Ajustez pour la hauteur de la navbar */
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+  }
+  
+  .text-content {
+    width: 50%;
+    text-align: center;
+  }
+  
+  .text-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+  }
+  
+  .text-content p {
+    font-size: 18px;
+  }
+
+/* Styles pour le bouton d'appel à l'action */
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff; /* Couleur du texte */
+  background-color: #FB1616; /* Couleur du bouton */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FF3838; /* Nouvelle couleur au survol */
+}
+
+.cta-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.cta-button:hover:before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+/* ... (styles pour la barre de navigation et la section principale restent inchangés) */
+
+/* Styles pour l'image flottante */
+.floating-icon img {
+    width: 80%; /* Ajustez la taille de l'image selon vos préférences */
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: floatAnimation 3s infinite alternate ease-in-out;
+  }
+  
+  @keyframes floatAnimation {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-20px);
+    }
+  }
+
+
+  /* ... (styles pour la barre de navigation et la section principale restent inchangés) */
+
+/* Styles pour la deuxième section "Pourquoi Nous" */
+
+.why-us-section  {
+    background-color: #87CEEB; /* Couleur de fond */
+    padding: 60px 0; /* Ajustez l'espacement selon vos préférences */
+  }
+  
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    border: solid 1px black ;
+  }
+  
+  .card {
+    background-color: #000000; /* Couleur de fond des cartes */
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  /* Animation des cartes au chargement de la page */
+  .card-container.active .card {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Styles pour les titres des cartes */
+  .card h2 {
+    color: #0F206D; /* Couleur du titre */
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Styles pour les descriptions des cartes */
+  .card p {
+    color: #333; /* Couleur du texte */
+    font-size: 16px;
+  }
+
+
+
+
+
+
+  /* Styles pour la vidéo et le bouton */
+
+  #video-container {
+    position: relative;
+  }
+
+  #video-popup-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #FB1616; /* Rouge */
+    background-color: #0F206D; /* Bleu foncé */
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 2;
+  }
+
+  /* Styles pour la pop-up */
+
+  #popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(15, 32, 109, 0.5); /* Couleur de fond avec transparence */
+    justify-content: center;
+    align-items: center;
+  }
+
+  #popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+  }
+
+  #close-popup-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #FB1616; /* Rouge */
+  }

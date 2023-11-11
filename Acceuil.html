@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Votre Titre Accrocheur</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Barre de navigation fixe -->
+    <div class="background-image">
+        <img src="Asset/Unesco façonne l'éthique de l’Intelligence Artificielle future.jpg" alt="Background Image">
+    </div>
+    <nav class="navbar">
+        <img src="Asset/ecole241.business/img/20220728_083028.png " alt="" style="height: 30px;">
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#pourquoi-nous">Pourquoi Nous</a></li>
+        <li><a href="#offres">Offres</a></li>
+        <li><a href="#comment-ca-marche">Comment Ça Marche</a></li>
+      </ul>
+    </nav>
+
+    <!-- Section principale -->
+    <section class="main-section" id="accueil">
+      <div class="content">
+        <div class="text-content">
+          <h1>Transformez Votre Activité : Formation Gratuite en Management et Leadership</h1>
+          <p> Dans le monde dynamique du commerce et de l'artisanat, la clé du succès réside dans la maîtrise des   compétences de gestion et du leadership. Notre programme de trois mois offre une opportunité unique de    développer vos capacités, de créer une visibilité percutante pour votre entreprise et de forger une voie vers la   croissance.</p>
+          <button class="cta-button">S'inscrire maintenant</button>
+        </div>
+        <div class="floating-icon">
+          <!-- Ajoutez le lien vers votre image ou utilisez une icône -->
+          <img src="Asset/Unesco façonne l'éthique de l’Intelligence Artificielle future.jpg" alt="Floating Icon"   height="300px">
+        </div>
+      </div>
+    </section>
+    <!-- Autres sections -->
+    
+    
+    <!-- Deuxième section "Pourquoi Nous" -->
+
+    <section class="why-us-section active" id="Pourquoi-nous">
+        <div class="card-container">
+          <div class="card">
+            <h2>Expertise Professionnelle</h2>
+            <p>Profitez de l'expertise de professionnels chevronnés du numérique pour acquérir des compétences de pointe.</p>
+          </div>
+          <div class="card">
+            <h2>Accompagnement Personnalisé</h2>
+            <p>Un accompagnement personnalisé tout au long de la formation pour répondre à vos besoins spécifiques.</p>
+          </div>
+          <div class="card">
+            <h2>Réseautage Exceptionnel</h2>
+            <p>Créez des liens avec d'autres commerçants et artisans, élargissez votre réseau et partagez vos expériences.</p>
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <script>
+        // Fonction pour vérifier si un élément est visible dans la fenêtre
+        function isElementInViewport(el) {
+          var rect = el.getBoundingClientRect();
+          return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+          );
+        }
+      
+        // Fonction pour ajouter la classe 'active' lorsque l'élément est visible
+        function handleScroll() {
+          var whyUsSection = document.getElementById('pourquoi-nous');
+          if (isElementInViewport(whyUsSection)) {
+            whyUsSection.classList.add('active');
+            // Désactive l'écouteur d'événement une fois que la classe a été ajoutée
+            window.removeEventListener('scroll', handleScroll);
+          }
+        }
+      
+        // Ajoutez un écouteur d'événement de défilement pour activer la classe 'active'
+        window.addEventListener('scroll', handleScroll);
+      
+        // Vérifie également au chargement de la page
+        handleScroll();
+      </script>
+      
+      <!-- ... (autres parties de votre HTML) -->
+</body>
+</html>
+    
+</body>
+</html>
