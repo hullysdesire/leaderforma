@@ -12,6 +12,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    height: 50px;
+    border-radius: 1px solid  black ;
     background-color: #0F206D; /* Bleu foncé */
     color: #FB1616; /* Rouge */
     text-align: center;
@@ -43,7 +45,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 70%;
     z-index: -1;
   }
   
@@ -56,28 +58,23 @@ body {
   /* Styles pour la section principale */
   .main-section {
     padding-top: 60px; /* Ajustez pour la hauteur de la navbar */
+    height: 400px;
   }
   
   .content {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 100vh;
+    height: 365px;
   }
   
   .text-content {
     width: 50%;
     text-align: center;
+    font-size: 21px;
+    color: white;
   }
   
-  .text-content h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
-  }
-  
-  .text-content p {
-    font-size: 18px;
-  }
 
 /* Styles pour le bouton d'appel à l'action */
 .cta-button {
@@ -144,50 +141,72 @@ body {
 
 /* Styles pour la deuxième section "Pourquoi Nous" */
 
-.why-us-section  {
-    background-color: #87CEEB; /* Couleur de fond */
-    padding: 60px 0; /* Ajustez l'espacement selon vos préférences */
-  }
-  
-  .card-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    border: solid 1px black ;
-  }
-  
-  .card {
-    background-color: #000000; /* Couleur de fond des cartes */
-    padding: 20px;
-    margin: 20px;
-    width: 300px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  
-  /* Animation des cartes au chargement de la page */
-  .card-container.active .card {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  /* Styles pour les titres des cartes */
-  .card h2 {
-    color: #0F206D; /* Couleur du titre */
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  /* Styles pour les descriptions des cartes */
-  .card p {
-    color: #333; /* Couleur du texte */
-    font-size: 16px;
-  }
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 150px;
+}
 
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.card:hover {
+  transform: scale(1);
+}
+
+.card:nth-child(1) {
+  animation: fadeInUp 1s ease-out 0.5s forwards, moveLeft 1s ease-out 0.5s forwards;
+}
+
+.card:nth-child(2) {
+  animation: fadeInUp 1s ease-out 1s forwards, moveRight 1s ease-out 1s forwards;
+}
+
+.card:nth-child(3) {
+  animation: fadeInUp 1s ease-out 1.5s forwards, moveLeft 1s ease-out 1.5s forwards;
+}
+
+.card:nth-child(4) {
+  animation: fadeInUp 1s ease-out 2s forwards, moveRight 1s ease-out 2s forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes moveLeft {
+  from {
+      transform: translateX(50px);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
+
+@keyframes moveRight {
+  from {
+      transform: translateX(-50px);
+  }
+  to {
+      transform: translateX(0);
+  }
+}
 
 
 
@@ -218,8 +237,8 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: 30%;
+    height: 30%;
     background: rgba(15, 32, 109, 0.5); /* Couleur de fond avec transparence */
     justify-content: center;
     align-items: center;
@@ -239,3 +258,223 @@ body {
     cursor: pointer;
     color: #FB1616; /* Rouge */
   }
+
+
+
+
+
+
+/* animation section 2  */
+
+:root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 35px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  height: 100%;
+}
+
+.hero-section{
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+  display: block;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.cards-grid{
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px){
+  .cards-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .cards-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.cards{
+  list-style: none;
+  position: relative;
+}
+
+.cards:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.cards__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(0.75) saturate(1.2) contrast(0.85);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.cards:hover .cards__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.cards-grid:hover > .cards:not(:hover) .cards__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+}
+
+.cards__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.cards__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.cards__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+  height: 200px;
+}
+
+
+
+/* NOS OFFRES SECTION */
+
+
+.offer-section{
+display: flex;
+align-items: center;
+justify-content: space-around;
+height: 500px;
+
+}
+.offer-content {
+  width: 50%;
+  text-align: left;
+  color: white;
+  animation: fadeInUp 1s ease-in-out; /* Animation d'apparition */
+}
+
+.offer-content li{
+  color: black ;
+}
+
+.offer-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px; /* Coins arrondis pour l'image */
+}
+
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.offer-list li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* dernier section avantages */
+
+
+.advantages-section {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #87CEEB; /* Couleur de fond de la section */
+}
+
+.advantage-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* Couleur de fond de la carte */
+}
+
+.advantage-icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #FB1616; /* Couleur de l'icône */
+}
+
+.advantage-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.advantage-description {
+  font-size: 18px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0F206D; /* Couleur de fond du footer */
+  color: #fff; /* Couleur du texte du footer */
+}
