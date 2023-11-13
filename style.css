@@ -1,8 +1,8 @@
-body {
+/* body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-  }
+  } */
 
 .navbar {
     display: flex;
@@ -79,7 +79,8 @@ body {
 /* Styles pour le bouton d'appel à l'action */
 .cta-button {
   display: inline-block;
-  padding: 15px 30px;
+  padding: 15px 15px;
+
   font-size: 18px;
   text-align: center;
   text-decoration: none;
@@ -94,7 +95,7 @@ body {
 }
 
 .cta-button:hover {
-  background-color: #FF3838; /* Nouvelle couleur au survol */
+  background-color: #0F206D; /* Nouvelle couleur au survol */
 }
 
 .cta-button:before {
@@ -235,8 +236,8 @@ body {
   #popup-overlay {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
+    top: 1;
+    left: 1;
     width: 30%;
     height: 30%;
     background: rgba(15, 32, 109, 0.5); /* Couleur de fond avec transparence */
@@ -293,6 +294,7 @@ body{
   height: 100%;
 }
 
+
 .hero-section{
   align-items: flex-start;
   background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
@@ -300,6 +302,8 @@ body{
   min-height: 100%;
   justify-content: center;
   padding: var(--spacing-xxl) var(--spacing-l);
+  font-size: var(--spacing-m);
+
 }
 
 .cards-grid{
@@ -389,39 +393,45 @@ body{
 /* NOS OFFRES SECTION */
 
 
-.offer-section{
-display: flex;
-align-items: center;
-justify-content: space-around;
-height: 500px;
-
+.offer-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 80px;
+  background-color: #87CEEB; /* Couleur de fond de la section */
 }
+
 .offer-content {
   width: 50%;
-  text-align: left;
-  color: white;
+  text-align: center;
   animation: fadeInUp 1s ease-in-out; /* Animation d'apparition */
 }
 
-.offer-content li{
-  color: black ;
+.offer-content h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.offer-content p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.offer-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.offer-list li {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
 .offer-content img {
   max-width: 100%;
   height: auto;
   border-radius: 8px; /* Coins arrondis pour l'image */
-}
-
-.offer-list {
-  list-style: none;
-  padding: 0;
-  margin: 20px 0;
-}
-
-.offer-list li {
-  margin-bottom: 10px;
-  font-size: 18px;
 }
 
 @keyframes fadeInUp {
@@ -434,6 +444,7 @@ height: 500px;
     transform: translateY(0);
   }
 }
+
 
 
 /* dernier section avantages */
@@ -471,6 +482,46 @@ height: 500px;
 .advantage-description {
   font-size: 18px;
 }
+
+
+#compte_a_rebours {
+  font-family: Arial;
+  background-image: url(Asset/ecole241.business/img/hd-wallpaper-6988255_1920.jpg ) ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 5px 5px;
+  background-color: #ffdb00;
+  color: white;
+  text-align: center;
+  margin: auto;
+  padding: 20px;
+  font-size: var(--spacing-m);
+  
+}
+
+.prefixe {
+  font-weight: bold;
+}
+
+.block, .nb {
+  display: inline-block;
+}
+
+.block {
+  width: 164px;
+  border-right: solid 1px black;
+}
+
+.block:nth-child(6) {
+  border-right: solid 1px #ffdb00;
+}
+
+.nb {
+  font-size: 5em;
+  font-weight: bold;
+}
+
+
 
 footer {
   text-align: center;
